@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import { initializeCanvas } from './utils/setup';
 import styles from './styles.module.css';
-import { startDrawing } from './utils/paint';
+import { draw } from './utils/art';
 
 export type ArgonCityProps = Record<string, never>;
 
@@ -48,7 +48,7 @@ export default class ArgonCity extends Component {
       width
     });
 
-    startDrawing(this.ctx);
+    const { pause, resume, status } = draw(this.ctx);
   }
 
   render(): React.ReactNode {

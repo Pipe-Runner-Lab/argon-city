@@ -3,12 +3,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
 }
 
 /* Moon */
 
 .moonContainer {
-  flex: 1;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +38,10 @@
 /* Stage */
 
 .stageContainer {
-  flex: 1;
+  position: absolute;
+  bottom: 0;
+  height: 60%;
+  width: 100%;
 }
 
 .stage {
